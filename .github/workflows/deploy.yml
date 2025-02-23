@@ -23,7 +23,7 @@ jobs:
       - name: Access Secrets from AWS Secret Manager
         id: get_secrets
         run: |
-          SECRET_VALUE=$(aws secretsmanager get-secret-value --secret-id dataloader-github-deploy-secrets --query SecretString --output text)
+          SECRET_VALUE=$(aws secretsmanager get-secret-value --secret-id dataloader --query SecretString --output text)
           echo "SECRET_VALUE=$SECRET_VALUE" >> $GITHUB_ENV
 
       - name: SSH into EC2 and Deploy

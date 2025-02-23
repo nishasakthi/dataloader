@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    image: dataimage3
+    image: dataimage4
     build: .
     ports:
       - "8000:8000"
